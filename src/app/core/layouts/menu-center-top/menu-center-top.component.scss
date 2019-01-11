@@ -1,0 +1,15 @@
+.navbar-nav li{
+    border-right: 1px solid;
+    margin: auto;
+    
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-nav li:last-child{
+    border-right: none;
+}

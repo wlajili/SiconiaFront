@@ -1,0 +1,71 @@
+<form>
+  <div class="row">
+    <div class="col-lg-3 col-sm-12">
+      <div class="form-group">
+        <label for="campaignName">Name</label>
+        <input type="text" class="form-control" name="campaignName" aria-describedby="campaignNameHelp" [(ngModel)]="campaignSearchForm['name']">
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+      <div class="form-group">
+        <label for="status">status</label>
+        <select class="form-control" name="statuts" [(ngModel)]="campaignSearchForm['status']">
+          <option *ngFor="let item of crStatus" [value]="item?.id">{{item?.label }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+      <div class="form-group">
+        <label for="targetGroupId">Target group ID</label>
+        <input type="text" class="form-control" name="targetGroupId" aria-describedby="targetGroupHelp" [disabled]="true"
+          [(ngModel)]="campaignSearchForm['targetGroupId']">
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+      <div class="form-group">
+        <label for="targetDevice">Target device S/N</label>
+        <!-- Input text field -->
+        <select class="form-control" name="targetDevice" [(ngModel)]="campaignSearchForm['targetDevice']" [disabled]="true">
+          <option *ngFor="let item of crTargetType" [value]="item?.id">{{item?.label}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-3 col-sm-12">
+      <div class="form-group">
+        <label for="typeCampaign">Type</label>
+        <select class="form-control" name="typeCampaign" [(ngModel)]="campaignSearchForm['campaignType']">
+          <option *ngFor="let item of crCampaignType" [value]="item?.id">{{item?.label}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+      <div class="form-group">
+        <label for="startDateGroup">Start date</label>
+        <input type="date" class="form-control" name="startDateGroup" [placeholder]="'Creation date greater Or Equal To'"
+          aria-describedby="startDateGroupHelp" placeholder="Start Date" [(ngModel)]="campaignSearchForm['startDate']">
+        <small id="endDateGroupHelp" class="form-text text-muted">Creation date greater or equal to</small>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+      <div class="form-group">
+        <label for="endDateGroup">End date</label>
+        <input type="date" class="form-control" name="endDateGroup" [placeholder]="'Creation date greater Or Equal To'"
+          aria-describedby="endDateGroupHelp" placeholder="End Date" [(ngModel)]="campaignSearchForm['endDate']">
+        <small id="endDateGroupHelp" class="form-text text-muted">Creation date less or equal to</small>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-12"></div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-6">
+      <input type="button" (click)="onRestFormClick()" class="btn text-secondary pull-right" value="Cancel" />
+    </div>
+    <div class="col-6">
+      <input type="submit" class="btn btn-primary pull-left" value="Search" (click)="onSearchCampaignClick();dropdown.close();" />
+    </div>
+  </div>
+</form>

@@ -1,0 +1,491 @@
+
+/*ICONS SICONIA*/
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'siconia' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-Accomplished-Campaigns .path1:before {
+    content: "\e900";
+    color: rgb(77, 54, 112);
+  }
+  
+  .icon-Accomplished-Campaigns .path2:before {
+    content: "\e901";
+    margin-left: -1em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Accomplished-Campaigns .path3:before {
+    content: "\e902";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Active-Delete:before {
+    content: "\e903";
+    color: #e64759;
+  }
+  
+  .icon-Active-View:before {
+    content: "\e904";
+    color: #2196f3;
+  }
+  
+  .icon-Add:before {
+    content: "\e905";
+    color: #513976;
+  }
+  
+  .icon-calendar:before {
+    content: "\e906";
+    color: #563d7c;
+  }
+  
+  .icon-Campaigns:before {
+    content: "\e907";
+    color: #4d3670;
+  }
+  
+  .icon-Delete:before {
+    content: "\e908";
+    color: #a0a1b2;
+  }
+  
+  .icon-Edit:before {
+    content: "\e909";
+    color: #513976;
+  }
+  
+  .icon-Electricity-Meters-Activation-Pending .path1:before {
+    content: "\e90a";
+    color: rgb(241, 123, 77);
+  }
+  
+  .icon-Electricity-Meters-Activation-Pending .path2:before {
+    content: "\e90b";
+    margin-left: -0.8759765625em;
+    color: rgb(38, 191, 185);
+  }
+  
+  .icon-Electricity-Meters-Activation-Pending .path3:before {
+    content: "\e90c";
+    margin-left: -0.8759765625em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Electricity-Meters-Activation-Pending .path4:before {
+    content: "\e90d";
+    margin-left: -0.8759765625em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Electricity-Meters-Activation-Pending .path5:before {
+    content: "\e90e";
+    margin-left: -0.8759765625em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Electricity-Meters-Activation .path1:before {
+    content: "\e90f";
+    color: rgb(241, 123, 77);
+  }
+  
+  .icon-Electricity-Meters-Activation .path2:before {
+    content: "\e910";
+    margin-left: -0.5419921875em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Electricity-Meters-Activation .path3:before {
+    content: "\e911";
+    margin-left: -0.5419921875em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Electricity-Meters-Failed .path1:before {
+    content: "\e912";
+    color: rgb(241, 123, 77);
+  }
+  
+  .icon-Electricity-Meters-Failed .path2:before {
+    content: "\e913";
+    margin-left: -0.5419921875em;
+    color: rgb(230, 71, 89);
+  }
+  
+  .icon-Electricity-Meters-Failed .path3:before {
+    content: "\e914";
+    margin-left: -0.5419921875em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Electricity-Meters-Pending .path1:before {
+    content: "\e915";
+    color: rgb(241, 123, 77);
+  }
+  
+  .icon-Electricity-Meters-Pending .path2:before {
+    content: "\e916";
+    margin-left: -0.5419921875em;
+    color: rgb(38, 191, 185);
+  }
+  
+  .icon-Electricity-Meters-Pending .path3:before {
+    content: "\e917";
+    margin-left: -0.5419921875em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Electricity-Meters:before {
+    content: "\e918";
+    color: #f17b4d;
+  }
+  
+  .icon-Expand:before {
+    content: "\e919";
+    color: #a0a1b2;
+  }
+  
+  .icon-Filtre-Board:before {
+    content: "\e91a";
+    color: #563d7c;
+  }
+  
+  .icon-Firmware-Applicatif-Meter:before {
+    content: "\e91b";
+    color: #604884;
+  }
+  
+  .icon-Firmware-Modem:before {
+    content: "\e91c";
+    color: #604884;
+  }
+  
+  .icon-Firmware-Upgrade-Campaigns:before {
+    content: "\e91d";
+    color: #18bace;
+  }
+  
+  .icon-Firmware-USB:before {
+    content: "\e91e";
+    color: #563d7c;
+  }
+  
+  .icon-Gaz-Meters:before {
+    content: "\e91f";
+    color: #e64759;
+  }
+  
+  .icon-Icon-Group-Active-Dashboard-Group:before {
+    content: "\e920";
+    color: #563d7c;
+  }
+  
+  .icon-Icon-Group-Dashboard-Group:before {
+    content: "\e921";
+  }
+  
+  .icon-Import-Files:before {
+    content: "\e922";
+    color: #513976;
+  }
+  
+  .icon-In-progress-Campaigns .path1:before {
+    content: "\e923";
+    color: rgb(77, 54, 112);
+  }
+  
+  .icon-In-progress-Campaigns .path2:before {
+    content: "\e924";
+    margin-left: -1em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-In-progress-Campaigns .path3:before {
+    content: "\e925";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Key-Renewal-Camapigns:before {
+    content: "\e926";
+    color: #7b58b7;
+  }
+  
+  .icon-Menu-Active-Campaigns:before {
+    content: "\e927";
+    color: #563d7c;
+  }
+  
+  .icon-Menu-Active-Configuration:before {
+    content: "\e928";
+    color: #563d7c;
+  }
+  
+  .icon-Menu-Active-Firmware-Library:before {
+    content: "\e929";
+    color: #563d7c;
+  }
+  
+  .icon-Menu-Active-Groups:before {
+    content: "\e92a";
+    color: #563d7c;
+  }
+  
+  .icon-Menu-Active-Meters:before {
+    content: "\e92b";
+    color: #563d7c;
+  }
+  
+  .icon-Menu-Campaigns:before {
+    content: "\e92c";
+  }
+  
+  .icon-Menu-Configuration:before {
+    content: "\e92d";
+  }
+  
+  .icon-Menu-Firmware-Library:before {
+    content: "\e92e";
+  }
+  
+  .icon-Menu-Groups:before {
+    content: "\e92f";
+  }
+  
+  .icon-Menu-Meters:before {
+    content: "\e930";
+  }
+  
+  .icon-Meters-in-Campaign .path1:before {
+    content: "\e931";
+    color: rgb(77, 54, 112);
+  }
+  
+  .icon-Meters-in-Campaign .path2:before {
+    content: "\e932";
+    margin-left: -1em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Meters-in-Campaign .path3:before {
+    content: "\e933";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Meters-Selected .path1:before {
+    content: "\e934";
+    color: rgb(77, 54, 112);
+  }
+  
+  .icon-Meters-Selected .path2:before {
+    content: "\e935";
+    margin-left: -1em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Meters-Selected .path3:before {
+    content: "\e936";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Network-DC:before {
+    content: "\e937";
+  }
+  
+  .icon-Network-Meters:before {
+    content: "\e938";
+  }
+  
+  .icon-Notification-Done:before {
+    content: "\e939";
+    color: #9ed26a;
+  }
+  
+  .icon-Notification-Failed:before {
+    content: "\e93a";
+    color: #d94452;
+  }
+  
+  .icon-Notification-In-progress:before {
+    content: "\e93b";
+    color: #2196f3;
+  }
+  
+  .icon-Notification-Search-History .path1:before {
+    content: "\e93c";
+    color: rgb(58, 68, 74);
+  }
+  
+  .icon-Notification-Search-History .path2:before {
+    content: "\e93d";
+    margin-left: -1em;
+    color: rgb(38, 191, 185);
+  }
+  
+  .icon-Notification-Warning:before {
+    content: "\e93e";
+    color: #f1c40f;
+  }
+  
+  .icon-Save-Search-History:before {
+    content: "\e93f";
+    color: #513976;
+  }
+  
+  .icon-Search-History:before {
+    content: "\e940";
+  }
+  
+  .icon-Search:before {
+    content: "\e941";
+    color: #a0a1b2;
+  }
+  
+  .icon-Selected-Table .path1:before {
+    content: "\e942";
+    color: rgb(241, 123, 77);
+  }
+  
+  .icon-Selected-Table .path2:before {
+    content: "\e943";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-Accomplished-Campaigns .path1:before {
+    content: "\e944";
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Status-Accomplished-Campaigns .path2:before {
+    content: "\e945";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-Activation-Pending .path1:before {
+    content: "\e946";
+    color: rgb(38, 191, 185);
+  }
+  
+  .icon-Status-Activation-Pending .path2:before {
+    content: "\e947";
+    margin-left: -1em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Status-Activation-Pending .path3:before {
+    content: "\e948";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-Activation-Pending .path4:before {
+    content: "\e949";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-Activation .path1:before {
+    content: "\e94a";
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Status-Activation .path2:before {
+    content: "\e94b";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-Failed .path1:before {
+    content: "\e94c";
+    color: rgb(230, 71, 89);
+  }
+  
+  .icon-Status-Failed .path2:before {
+    content: "\e94d";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-In-progress-Campaigns .path1:before {
+    content: "\e94e";
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Status-In-progress-Campaigns .path2:before {
+    content: "\e94f";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-Pending .path1:before {
+    content: "\e950";
+    color: rgb(38, 191, 185);
+  }
+  
+  .icon-Status-Pending .path2:before {
+    content: "\e951";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Status-Upcoming-Campaigns .path1:before {
+    content: "\e952";
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Status-Upcoming-Campaigns .path2:before {
+    content: "\e953";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Upcoming-Campaigns .path1:before {
+    content: "\e954";
+    color: rgb(77, 54, 112);
+  }
+  
+  .icon-Upcoming-Campaigns .path2:before {
+    content: "\e955";
+    margin-left: -1em;
+    color: rgb(170, 143, 212);
+  }
+  
+  .icon-Upcoming-Campaigns .path3:before {
+    content: "\e956";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .icon-Update-Configuration-Campaigns:before {
+    content: "\e957";
+    color: #6c999b;
+  }
+  
+  .icon-View:before {
+    content: "\e958";
+    color: #a0a1b2;
+  }
+  
+  .icon-Water-Meters:before {
+    content: "\e959";
+    color: #26bfb9;
+  }
+  
+  /***************/

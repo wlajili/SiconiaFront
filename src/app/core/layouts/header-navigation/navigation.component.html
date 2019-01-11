@@ -1,0 +1,100 @@
+<header class="topbar">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <!-- ============================================================== -->
+        <!-- Logo -->
+        <!-- ============================================================== -->
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"> 
+			
+			<!-- Logo icon -->
+			<b>
+					<img src="../../../../assets/images/logo-light-icon.png" class="dark-logo"
+					alt="homepage"/>
+			</b> 
+			<!--End Logo icon -->
+			
+			<!-- Logo text --> 
+			<span>
+					<img src="../../../../assets/images/logo-light-text.png" class="dark-logo"
+					alt="homepage"/>
+			</span>
+			
+			</a>
+		</div>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-collapse">
+            <!-- ============================================================== -->
+            <!-- toggle and nav items / mt-md-0 -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav">
+                <!-- This is  m-l-10 -->
+                <li class="nav-item">
+                    <a class="nav-link sidebartoggler text-muted waves-effect waves-dark" 
+                    href="javascript:void(0)"><i class="ti-menu"></i></a> 
+                </li>
+                
+            </ul>
+
+            <!-- ============================================================== -->
+            <!-- menu-center-top -->
+            <!-- ============================================================== -->
+            <app-menu-center-top></app-menu-center-top>
+            <!-- ============================================================== -->
+            <!-- User profile and search /  my-lg-0-->
+            <!-- ============================================================== -->
+                
+            <ul class="navbar-nav ml-auto">
+                <!-- ============================================================== -->
+                <!-- Profile -->
+                <!-- ============================================================== -->
+                <li class="nav-item dropdown" ngbDropdown placement="bottom-right">
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle text-muted waves-effect waves-dark" 
+                    href="javascript:void(0)" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                   
+                        <i class="hidden-xs-down icon-user" style="font-size:23px;"></i> Administrateur :
+                        <span>WAJDI</span>&nbsp;<i class="hidden-xs-down icon-arrow-down" style="font-size:12px;"></i>
+
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right animated slideInDown" ngbDropdownMenu>
+                        <ul class="dropdown-user">
+                            <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                            <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- Language -->
+        <!-- ============================================================== -->
+        <div class="nav-item dropdown" ngbDropdown placement="bottom-right">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="javascript:void(0)" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                <img src="{{langImg}}" alt="language" class="profile-pic" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right animated slideInDown" ngbDropdownMenu>
+                <ul class="dropdown-user">
+                    <li (click)="changeLanguage('en')">
+                        <a>
+                            <img src="assets/images/lang-flag/en.png" alt="language" class="profile-pic"  />&nbsp;English</a>
+                    </li>
+                    <li>
+                        <a (click)="changeLanguage('fr')">
+                            <img src="assets/images/lang-flag/fr.png" alt="language" class="profile-pic" />&nbsp;Français</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

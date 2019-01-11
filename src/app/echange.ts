@@ -11,7 +11,7 @@ export class Echange {
     requestPriority: String;
     executeStartTime: Date;
     executeExpireTime: Date;
-    device: Compteur;
+    deviceId: Number;
 
     constructor() {}
 }

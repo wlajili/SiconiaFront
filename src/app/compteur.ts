@@ -1,5 +1,6 @@
 export class Compteur {
-    mRID: String;
+    id: Number;
+    mrid: String;
     idType: String;
     pathName: String;
     modelNumber: String;

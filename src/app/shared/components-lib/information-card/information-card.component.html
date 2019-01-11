@@ -1,0 +1,69 @@
+<div class="card">
+	<div class="card-body">
+
+		<h4 class="card-title">
+			{{title}}
+			<!-- LINK CARD -->
+			<span *ngIf=" (data || data?.length > 0) && menu" class="float-right dropdown" ngbDropdown placement="bottom-right">
+				<a ngbDropdownToggle class="dropdown-toggle text-muted" href="javascript:void(0)" data-toggle="dropdown"
+				 aria-haspopup="true" aria-expanded="false">
+					<i id="dropdownConfig" class="icon-options-vertical"></i>
+				</a>
+
+				<div class="dropdown-menu" ngbDropdownMenu>
+					<div *ngFor="let item of menu">
+						<a (click)="handleMenuClickItem(item)" *ngIf="!item.disabled" class="dropdown-item pointer"><i class="fa {{item?.icon}}"
+							 *ngIf="item?.icon"></i>&nbsp;{{item?.label}}</a>
+					</div>
+				</div>
+			</span>
+			<!-- END LINK CARD -->
+		</h4>
+
+
+		<h6 class="card-subtitle">{{description}}</h6>
+
+		<!-- IMAGE CARD -->
+		<div *ngIf="img" class="card-text card-img-part">
+			<img class="mx-auto d-block" src="assets/images/img/{{img}}">
+		</div>
+		<!-- END IMAGE CARD -->
+
+		<!-- CONTENT CARD -->
+		<div class="card-text">
+			<table class="table">
+				<tbody>
+					<tr *ngIf="!data || data?.length === 0">
+						<td>No such data</td>
+					</tr>
+					<tr *ngFor="let content of data | mapToIterable">
+						<td *ngIf="content.val && content.key !== 'mrid' && content.val && content.key !== 'id' && content.key !== 'links'">{{content?.key}}</td>
+						<td *ngIf="content.val && content.key !== 'mrid' && content.val && content.key !== 'id' && content.key !== 'links'"
+						 class="text-right">{{content?.val}}</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+		<div class="card-text">
+			<!-- END CONTENT CARD -->
+			<div class="row" *ngIf=" data || data?.length > 0">
+
+				<div class="col-md-6 pull-left">
+					<button class="btn btn-success" *ngIf="validateTextMsg === 'Update'" (click)="onStartEvent.emit()"><i class="fa fa-play-circle"></i>&nbsp;Launch</button>
+					&nbsp;
+					<button class="btn btn-primary" *ngIf="validateTextMsg" (click)="onValidateEvent.emit()">
+						<i [ngClass]="{'icon-refresh': validateTextMsg ==='Update','fa fa-save': validateTextMsg ==='Save'}">
+						</i>&nbsp;{{validateTextMsg}}</button>
+					&nbsp;
+					<button class="btn text-secondary" *ngIf="cancelTextMsg" (click)="onCancelEvent.emit()"><i class="fa fa-ban"></i>&nbsp;{{cancelTextMsg}}</button>
+				</div>
+
+				<div *ngIf="showAll" class="col-md-6 text-right">
+					<a class="text-muted" routerLink="{{showAll}}">SHOW LIST</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

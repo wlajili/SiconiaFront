@@ -1,0 +1,5 @@
+{
+    "api_url_read": "http://localhost:8005",
+    "api_url_busIhm": "http://localhost:19191/busIhm",
+    "api_url_write_odm": "http://localhost:19192"
+}

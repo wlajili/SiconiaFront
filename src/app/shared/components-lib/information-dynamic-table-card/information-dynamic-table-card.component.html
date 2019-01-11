@@ -1,0 +1,134 @@
+<div class="" [ngClass]="{'card': !withoutCard}">
+	<div class="" [ngClass]="{'card-body': !withoutCard}">
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<h3 class="card-title">{{title}}</h3>
+			</div>
+			<div class="col-md-6 d-flex flex-row-reverse" *ngIf="pageable">
+				<div class="form-inline">
+					<div *ngIf="topButton">
+						<a *ngFor="let item of topButton" class="btn btn-primary btn-custom-table" routerLink="">{{item?.label}}</a>
+					</div>
+					<div class="ml-3 mr-3">
+						<span>{{pageable?.pageable?.offset +1}}</span> - <span>{{pageable?.pageable?.offset +
+							pageable?.numberOfElements}}</span> of <span>{{pageable?.totalElements}}</span>
+					</div>
+
+					<div *ngIf="pageable?.totalElements > 10" class="form-group">
+						<select class="form-control" [(ngModel)]="paramPage.size" (change)="elementPerPage()">
+							<option value="10">10 per page</option>
+							<option value="20">20 per page</option>
+							<option value="30">30 per page</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table">
+						<thead class="thead-color">
+							<tr>
+
+								<th class="pointer" (click)="sortByColumnParam(col.param)" *ngFor="let col of thead">{{col.label}}</th>
+
+								<th scope="col" class="text-right">
+									<div *ngIf="check" class="form-check">
+										<input class="form-check-input position-static" [(ngModel)]="allChecked" (change)="checkBoxInputAll();" type="checkbox">
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr *ngFor="let items of data let i = index" [style.background-color]="data[i].selected === true ? '#fdf2ee' : 'white'"
+								(click)="rowClick.emit(items)">
+								<ng-container *ngFor="let key of items | keys">
+
+									<ng-container *ngIf="firstLink !== ''">
+
+										<td *ngIf="(key.key !== 'id') && (key.key !== 'mrid') && (key.key !== 'extra') && (key.key !== thead[0].label) && (key.key !== 'selected')">
+											<span *ngIf="isDate(key.value)">{{key.value | date:'short'}}</span>
+											<span *ngIf="!isDate(key.value)">{{key.value}}</span>
+										</td>
+
+										<ng-container *ngIf="key.key === thead[0].label">
+											<td><a routerLink="{{firstLink}}{{items.mrid}}">{{key.value}}</a></td>
+										</ng-container>
+
+
+									</ng-container>
+
+
+									<ng-container *ngIf="firstLink === ''">
+										<td *ngIf="(key.key !== 'id') && (key.key !== 'extra') && (key.key !== 'mrid') && (key.key !== 'selected')">
+											<span *ngIf="isDate(key.value)">{{key.value | date:'short'}}</span>
+											<span *ngIf="!isDate(key.value)">{{key.value}}</span>
+										</td>
+									</ng-container>
+
+
+									<ng-container *ngIf="key.key === 'extra'">
+										<td class="text-right"><span *ngIf="tableRowMenu" class="dropdown mr-3" ngbDropdown placement="bottom-right">
+												<a ngbDropdownToggle class="dropdown-toggle text-muted" href="javascript:void(0)" data-toggle="dropdown"
+												 aria-haspopup="true" aria-expanded="false"> <i id="dropdownConfig" class="icon-options-vertical"></i>
+												</a>
+												<div class="dropdown-menu" ngbDropdownMenu>
+													<a *ngFor="let itemMenu of key.value" routerLink="{{itemMenu.link}}{{items.id}}" class="dropdown-item">{{itemMenu.label}}</a>
+												</div>
+											</span>
+											<div *ngIf="check" class="form-check d-inline">
+
+												<input class="form-check-input position-static"  [(ngModel)]="items.selected" (change)="checkBoxInput(i, items.id)"
+												 type="checkbox">
+
+											</div>
+										</td>
+									</ng-container>
+
+								</ng-container>
+							</tr>
+							<tr *ngIf="!data || data?.length === 0">
+								<td colspan="2">No such data </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 d-flex flex-row-reverse">
+
+
+				<div class="form-inline">
+
+					<ng-container *ngIf="pageable?.totalElements>pageable?.size">
+						<div class="ml-3 mr-3">
+							Page <input type="text" [(ngModel)]="paramPage.page" disabled class="form-control text-center this-page-pagination-input">
+							of <span>{{pageable?.totalPages}}</span>
+						</div>
+
+						<a class="btn btn-primary btn-custom-table" (click)="precedPage();"> <i class="fa fa-chevron-left"></i> </a>
+						<a class="btn btn-primary btn-custom-table mr-3" (click)="nextPage();"> <i class="fa fa-chevron-right"></i> </a>
+					</ng-container>
+
+					<!-- EXPORT MENU -->
+					<span *ngIf="exportMenu" class="dropdown" ngbDropdown placement="bottom-right"> <a ngbDropdownToggle class="dropdown-toggle text-muted"
+						 href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							EXPORT <i id="dropdownConfig" class="icon-options-vertical"></i>
+						</a>
+
+						<div class="dropdown-menu" ngbDropdownMenu>
+							<a *ngFor="let item of exportMenu" href="" class="dropdown-item">{{item.label}}</a>
+						</div>
+					</span>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>

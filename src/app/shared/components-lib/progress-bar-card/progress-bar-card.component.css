@@ -1,0 +1,89 @@
+.progress-bar {
+    height: 13px;
+    border-radius: 10px;
+}
+
+.progress {
+    border-radius: 10px;
+}
+
+.card-title {
+    margin-bottom: 5px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.firstNmbr {
+    font-size: 30px;
+}
+
+.a {
+    background-color: #f17b4d;
+}
+
+
+.b {
+    background-color: #e64759;
+}
+
+
+.c {
+    background-color: #26bfbc;
+}
+
+
+.d {
+    background-color: #66bb6a;
+}
+
+
+.e {
+    background-color: #ef5350;
+}
+
+
+.f {
+    background-color: #26bfb9;
+}
+
+
+.g {
+    background-color: #aa8fd4;
+}
+
+
+.h {
+    background-color: #3a444a;
+}
+
+
+.i {
+    background-color: #e74d54;
+}
+
+
+.j {
+    background-color: #72cef2;
+}
+
+
+.k {
+    background-color: #563e7d;
+}
+
+
+.l {
+    background-color: #20aee3;
+}
+
+
+.m {
+    background-color: #19c8ab;
+}
+
+
+.n {
+    background-color: #6772e5;
+}

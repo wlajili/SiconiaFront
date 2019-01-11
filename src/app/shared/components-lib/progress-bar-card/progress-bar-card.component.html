@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-6">
+    <h4 *ngIf="type === 'type1'" class="card-title"><span class="firstNmbr">{{value1}}</span>/{{value2}}</h4>
+    <h4 *ngIf="type === 'type2'" class="card-title"><span class="firstNmbr">{{value1}}</span></h4>
+    <h5 class="card-text">{{subtitle}}</h5>
+  </div>
+  <div class="col-6 text-right">
+    <h1 [style.color]="color">{{percent.toFixed(2) || 0}}%</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" [ngStyle]="{width: percent + '%'}" [style.background-color]="color"
+        aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+</div>

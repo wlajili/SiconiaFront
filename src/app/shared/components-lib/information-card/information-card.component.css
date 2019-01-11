@@ -1,0 +1,34 @@
+img {
+  border: 7px solid #f1f1f1;
+  border-radius: 50%;
+}
+
+.card-img-part {
+  padding-bottom: 20px;
+  border-bottom: 3px solid #f1f1f1;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table > tbody > tr:first-child > td {
+  border: none;
+}
+
+.table > tbody > tr:nth-child(2) > td {
+  border: none;
+}
+
+.table > tbody > tr > td:nth-child(2) {
+  font-weight: 400;
+  color: #455a64;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  color: #455a64;
+}

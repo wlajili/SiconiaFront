@@ -1,0 +1,26 @@
+<div class="card" [ngClass]="{ 
+  'text-center' : cardStyle === 'card-center',
+  'card-background' : cardStyle === 'card-background',
+  'card-border' : cardStyle === 'card-border'
+ }">
+
+  <div class="card-body">
+    <div class="row">
+      <div [ngClass]="{ 
+		  'col-md-12' : cardStyle === 'card-center',
+		  'col-md-6 col-sm-12 col-xs-12' : cardStyle === ''
+		 }">
+        <h1 class="card-title text-nowrap">{{title || 0}}</h1>
+        <p class="card-text text-nowrap">{{text}}</p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12 hidden-md-down m-auto text-right" 
+      [ngClass]="{'hidden-xs-up' : icon === ''}">
+        <span style="font-size: 55px;" class="{{icon}}">
+            <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</div>
+

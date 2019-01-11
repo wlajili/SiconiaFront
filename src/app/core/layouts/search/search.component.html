@@ -1,0 +1,56 @@
+<!-- ============================================================== -->
+<!-- Collapse Menu -->
+<!-- ============================================================== -->
+<div class="nav-item dropdown mega-dropdown" ngbDropdown #myDrop="ngbDropdown" [autoClose]="false">
+
+
+    <span ngbDropdownToggle class="btn" style="margin-top: 5px;">
+        <i class="mdi mdi-magnify"></i> {{ 'SEARCH.SELECT' | translate }}
+    </span>
+
+    <div class="dropdown-menu animated slideInDown" ngbDropdownMenu>
+        <div class="mega-dropdown-menu row">
+            <div class="col-12">
+                <ngb-tabset type="pills">
+                    <ngb-tab customClass="pillsRight">
+                        <ng-template ngbTabTitle><b>Search Meter</b></ng-template>
+                        <ng-template ngbTabContent>
+                            <br>
+                            <app-search-meter [dropdown]="myDrop"
+                            [firmware]="firmwareversionList" (onSearchEvent)="applySearchMeter($event)">
+                            </app-search-meter>
+
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab>
+                        <ng-template ngbTabTitle><b>Search Group</b></ng-template>
+                        <ng-template ngbTabContent>
+                            <br>
+                            <app-search-group [dropdown]="myDrop"></app-search-group>
+
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab>
+                        <ng-template ngbTabTitle><b>Search Campaign</b></ng-template>
+                        <ng-template ngbTabContent>
+                            <br>
+                            <app-search-campaign [dropdown]="myDrop"></app-search-campaign>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab>
+                        <ng-template ngbTabTitle><i class="mdi mdi-magnify"></i></ng-template>
+                        <ng-template ngbTabContent>
+                            <br>
+                            ---
+
+                        </ng-template>
+                    </ngb-tab>
+                </ngb-tabset>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- ============================================================== -->
+<!-- Collapse Menu -->
+<!-- ============================================================== -->

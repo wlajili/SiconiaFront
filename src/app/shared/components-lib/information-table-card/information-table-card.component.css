@@ -1,0 +1,13 @@
+.dropdown-toggle::after {
+    display:none;
+}
+
+thead{
+    background-color: #f6f5f8;
+    color: #563d7c;
+}
+
+tbody{
+	font-weight: 400;
+	color: #455a64;
+}

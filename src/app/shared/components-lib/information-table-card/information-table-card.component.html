@@ -1,0 +1,71 @@
+<div class="card">
+	<div class="card-body">
+
+		<h4 class="card-title">
+			{{title}}
+			<!-- LINK CARD -->
+			<span *ngIf="menu" class="float-right dropdown" ngbDropdown
+				placement="bottom-right"> <a ngbDropdownToggle
+				class="dropdown-toggle text-muted" href="javascript:void(0)"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i id="dropdownConfig" class="icon-options-vertical"></i>
+			</a>
+
+				<div class="dropdown-menu" ngbDropdownMenu>
+					<a *ngFor="let item of menu" routerLink="{{item.link}}"
+						class="dropdown-item">{{item.label}}</a>
+				</div>
+			</span>
+			<!-- END LINK CARD -->
+		</h4>
+
+		<h6 class="card-subtitle">{{description}}</h6>
+
+		<!-- CONTENT CARD -->
+		<div class="card-text">
+			<div class="table-responsive">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th *ngFor="let col of thead">{{col}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let items of data">
+						<td *ngFor="let key of items | keys">
+						
+							<span *ngIf="isDate(key.value)">{{key.value | date:'short'}}</span>
+							<span *ngIf="!isDate(key.value)">{{key.value}}</span>
+						
+						</td>
+					</tr>
+					<tr *ngIf="!data || data?.length === 0">
+							<td>No such data</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- END CONTENT CARD -->
+
+		<!-- SHOW LIST -->
+		<div *ngIf=" data || data?.length > 0" class="card-text text-right">
+			<a *ngIf="showAll" class="text-muted" [routerLink]="[showAll]">SHOW LIST</a> &nbsp;&nbsp;&nbsp;
+			<!-- EXPORT MENU -->
+			<span *ngIf="menu" class="float-right dropdown" ngbDropdown
+				placement="bottom-right"> <a ngbDropdownToggle
+				class="dropdown-toggle text-muted" href="javascript:void(0)"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					EXPORT <i id="dropdownConfig" class="icon-options-vertical"></i>
+			</a>
+
+				<div class="dropdown-menu" ngbDropdownMenu>
+					<a *ngFor="let item of menu" href="{{item.link}}"
+						class="dropdown-item">{{item.label}}</a>
+				</div>
+			</span>
+
+		</div>
+		<!-- END SHOW LIST -->
+	</div>
+</div>

@@ -18,8 +18,9 @@ export class MeterConnectionService {
 
     constructor(private http: HttpClient) {}
 
-    getAllMeterMridStartsWith(mRID: string) {
-        return this.http.get('http://localhost:8080/devicesStartwithMrid/' + mRID + '?size=' + size);
+    getAllMeterMridStartsWith(mRID: string): Observable<string []> {
+        return this.http.get<string[]>('http://localhost:8080/getMrids/' + mRID)
+        .pipe(retry(3));
     }
 
     /*

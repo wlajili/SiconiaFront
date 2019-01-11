@@ -1,0 +1,134 @@
+<form>
+    <div class="row">
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="ldn">LDN</label>
+                <input type="text" class="form-control" id="ldn" name="ldn" [(ngModel)]="criteria['ldn']" />
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="din">DIN</label>
+                <input type="text" id="din" class="form-control" name="din" [(ngModel)]="criteria['din']" />
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div *ngIf="energyType === undefined" class="form-group">
+                <label for="energyType">Type</label>
+                <select class="form-control" id="energyType" name="type" [disabled]="currentFirmwareVersion"
+                    [(ngModel)]="criteria['type']">
+                    <option *ngFor="let type of crTypeMeter" [value]="type['id']">{{type['label']}}</option>
+                </select>
+            </div>
+            <div *ngIf="energyType !== undefined" class="form-group">
+                <label for="energyType">Type</label>
+                <select class="form-control" id="energyType" name="type" [(ngModel)]="criteria['type']">
+                    <option>{{energyType}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="hardwareVersion">Hardware Version</label>
+                <input type="text" id="hardwareVersion" class="form-control" name="hardwareVersion" [(ngModel)]="criteria['hardwareVersion']" />
+                <!-- TODO: fill in from backend-->
+                <!--  <select class="form-control" id="hardwareVersion" name="hardwareVersion" [(ngModel)]="criteria['hardwareVersion']">
+                  <option>#1</option>
+                  <option>#2</option>
+              </select> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <!-- from backend -->
+                <label for="currentFWVersion">Current FW Version</label>
+                <select class="form-control" id="currentFWVersion" [disabled]="currentFirmwareVersion" name="firmwareVersion"
+                    [(ngModel)]="criteria['firmwareVersion']">
+                    <option *ngFor="let version of firmware" [value]="version.firmwareId">{{version.firmwareId}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="lifeCycleStatuts">Life Cycle Statuts</label>
+                <select class="form-control" id="lifeCycleStatuts" name="status" [(ngModel)]="criteria['status']">
+                    <option *ngFor="let status of crStatus" [value]="status['id']">{{status['label']}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="AMRRouter">AMR Router</label>
+                <select class="form-control" id="AMRRouter" name="amrRouter" [(ngModel)]="criteria['amrRouter']"
+                    [disabled]="true">
+                    <option>#Amr1</option>
+                    <option>#Amr2</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="communicationMethode">Communication Methode</label>
+                <select class="form-control" id="communicationMethode" name="communicationMethod" [(ngModel)]="criteria['communicationMethod']">
+                    <option *ngFor="let comm of crCommunicationMethod" [value]="comm['id']">{{comm['label']}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="groupeNameMeter">Groupe Name</label>
+                <input type="text" class="form-control" id="groupeNameMeter" name="groupeName" [(ngModel)]="criteria['groupeName']"
+                    [disabled]="true" />
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="palletID">Pallet ID</label>
+                <input type="text" class="form-control" id="palletID" name="palletId" [(ngModel)]="criteria['palletId']" />
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="boxID">Box ID</label>
+                <input type="text" class="form-control" id="boxID" name="boxId" [(ngModel)]="criteria['boxId']">
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="yearOfManufactory">Year Of Manufactory</label>
+                <input type="number" class="form-control" id="yearOfManufactory" name="yearManufactory" [(ngModel)]="criteria['yearManufactory']" />
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-12">
+            <div class="form-group">
+                <label for="supplier">Supplier</label>
+                <input type="text" class="form-control" id="supplier" name="supplier" [(ngModel)]="criteria['supplier']" />
+            </div>
+        </div>
+    </div>
+    <!-- TODO: apply css style for all type of search -->
+    <div class="row text-center" *ngIf="!currentFirmwareVersion && dropdown">
+        <div class="col-6">
+            <button (click)="onRestFormClick()" class="btn text-secondary pull-right">Cancel</button>
+        </div>
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary pull-left" (click)="onSearchEvent.emit(criteria);onClick();dropdown.close()">
+                Search</button>
+        </div>
+    </div>
+    <div class="row" *ngIf="currentFirmwareVersion || !dropdown">
+        <div class="col-12">
+            <button class="btn btn-primary" (click)="onSearchEvent.emit(criteria);onClick()"><i class="fa fa-search"
+                    aria-hidden="true"></i></button>&nbsp;
+            <button (click)="onRestFormClick()" class="btn text-secondary">Initialize</button>
+        </div>
+    </div>
+</form>
